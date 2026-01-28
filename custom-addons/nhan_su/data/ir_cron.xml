@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Scheduled Action: Cham cong tu dong hang ngay -->
+    <record id="ir_cron_cham_cong_tu_dong" model="ir.cron">
+        <field name="name">Cham cong tu dong hang ngay</field>
+        <field name="model_id" ref="model_nhan_su_cham_cong"/>
+        <field name="state">code</field>
+        <field name="code">model.action_cham_cong_tu_dong()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active" eval="True"/>
+    </record>
+    
+    <!-- Scheduled Action: Tao tong hop cong cuoi thang -->
+    <record id="ir_cron_tong_hop_cong_cuoi_thang" model="ir.cron">
+        <field name="name">Tong hop cong tu dong cuoi thang</field>
+        <field name="model_id" ref="model_nhan_su_tong_hop_cong"/>
+        <field name="state">code</field>
+        <field name="code">model.action_tong_hop_tu_dong()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

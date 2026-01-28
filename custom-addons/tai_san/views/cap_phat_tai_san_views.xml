@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cap_phat_tai_san_tree" model="ir.ui.view">
+        <field name="name">tai.san.cap.phat.tree</field>
+        <field name="model">tai.san.cap.phat</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="ngay_cap_phat"/>
+                <field name="nhan_vien_id"/>
+                <field name="phong_ban_id"/>
+                <field name="loai_cap_phat"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cap_phat_tai_san_form" model="ir.ui.view">
+        <field name="name">tai.san.cap.phat.form</field>
+        <field name="model">tai.san.cap.phat</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_gui_nhan" string="Gửi nhận" type="object" class="oe_highlight"/>
+                    <button name="action_xac_nhan_nhan" string="Xác nhận nhận" type="object" class="oe_highlight"/>
+                    <button name="action_huy" string="Hủy" type="object"/>
+                    <field name="trang_thai" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="de_xuat_id"/>
+                            <field name="ngay_cap_phat"/>
+                            <field name="loai_cap_phat"/>
+                        </group>
+                        <group>
+                            <field name="nhan_vien_id"/>
+                            <field name="phong_ban_id"/>
+                            <field name="nguoi_giao_id"/>
+                            <field name="ngay_nhan"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="tai_san_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Biên bản bàn giao">
+                            <field name="bien_ban_ban_giao" placeholder="Nội dung biên bản bàn giao..." nolabel="1"/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cap_phat_tai_san" model="ir.actions.act_window">
+        <field name="name">Cấp phát tài sản</field>
+        <field name="res_model">tai.san.cap.phat</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

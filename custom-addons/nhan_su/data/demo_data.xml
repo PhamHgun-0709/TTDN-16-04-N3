@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Ca làm việc -->
+        <record id="ca_hanh_chinh" model="nhan.su.ca.lam.viec">
+            <field name="ma_ca">CA001</field>
+            <field name="name">Ca hành chính</field>
+            <field name="gio_bat_dau">8.5</field>
+            <field name="gio_ket_thuc">17.5</field>
+            <field name="gio_bat_dau_sang">8.5</field>
+            <field name="gio_ket_thuc_sang">12.0</field>
+            <field name="gio_bat_dau_chieu">13.0</field>
+            <field name="gio_ket_thuc_chieu">17.5</field>
+            <field name="bat_dau_tinh_tang_ca">17.5</field>
+            <field name="he_so_tang_ca">1.5</field>
+        </record>
+
+        <!-- Phòng ban -->
+        <record id="phong_ke_toan" model="nhan.su.phong.ban">
+            <field name="ma_phong_ban">PB001</field>
+            <field name="name">Phòng Kế toán</field>
+        </record>
+        <record id="phong_nhan_su" model="nhan.su.phong.ban">
+            <field name="ma_phong_ban">PB002</field>
+            <field name="name">Phòng Nhân sự</field>
+        </record>
+        <record id="phong_kinh_doanh" model="nhan.su.phong.ban">
+            <field name="ma_phong_ban">PB003</field>
+            <field name="name">Phòng Kinh doanh</field>
+        </record>
+        <record id="phong_ky_thuat" model="nhan.su.phong.ban">
+            <field name="ma_phong_ban">PB004</field>
+            <field name="name">Phòng Kỹ thuật</field>
+        </record>
+
+        <!-- Chức vụ -->
+        <record id="chuc_vu_giam_doc" model="nhan.su.chuc.vu">
+            <field name="ma_chuc_vu">CV001</field>
+            <field name="name">Giám đốc</field>
+            <field name="cap_bac">giam_doc</field>
+            <field name="luong_co_ban">25000000</field>
+            <field name="phu_cap">5000000</field>
+        </record>
+        <record id="chuc_vu_truong_phong" model="nhan.su.chuc.vu">
+            <field name="ma_chuc_vu">CV002</field>
+            <field name="name">Trưởng phòng</field>
+            <field name="cap_bac">truong_phong</field>
+            <field name="luong_co_ban">15000000</field>
+            <field name="phu_cap">3000000</field>
+        </record>
+        <record id="chuc_vu_nhan_vien" model="nhan.su.chuc.vu">
+            <field name="ma_chuc_vu">CV003</field>
+            <field name="name">Nhân viên</field>
+            <field name="cap_bac">nhan_vien</field>
+            <field name="luong_co_ban">8000000</field>
+            <field name="phu_cap">500000</field>
+        </record>
+        <record id="chuc_vu_truong_nhom" model="nhan.su.chuc.vu">
+            <field name="ma_chuc_vu">CV004</field>
+            <field name="name">Trưởng nhóm</field>
+            <field name="cap_bac">truong_nhom</field>
+            <field name="luong_co_ban">12000000</field>
+            <field name="phu_cap">1500000</field>
+        </record>
+
+        <!-- Nhân viên -->
+        <record id="nhan_vien_001" model="nhan.su.nhan.vien">
+            <field name="name">Nguyễn Văn An</field>
+            <field name="gioi_tinh">nam</field>
+            <field name="ngay_sinh">1990-05-15</field>
+            <field name="so_dien_thoai">0901234567</field>
+            <field name="email">nguyenvanan@company.com</field>
+            <field name="dia_chi">123 Đường ABC, Quận 1, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_ke_toan"/>
+            <field name="chuc_vu_id" ref="chuc_vu_giam_doc"/>
+            <field name="ngay_vao_lam">2020-01-01</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_002" model="nhan.su.nhan.vien">
+            <field name="name">Trần Thị Bình</field>
+            <field name="gioi_tinh">nu</field>
+            <field name="ngay_sinh">1992-08-20</field>
+            <field name="so_dien_thoai">0902345678</field>
+            <field name="email">tranthibinh@company.com</field>
+            <field name="dia_chi">456 Đường XYZ, Quận 2, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_nhan_su"/>
+            <field name="chuc_vu_id" ref="chuc_vu_truong_phong"/>
+            <field name="ngay_vao_lam">2020-03-15</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_003" model="nhan.su.nhan.vien">
+            <field name="name">Lê Văn Cường</field>
+            <field name="gioi_tinh">nam</field>
+            <field name="ngay_sinh">1995-03-10</field>
+            <field name="so_dien_thoai">0903456789</field>
+            <field name="email">levancuong@company.com</field>
+            <field name="dia_chi">789 Đường DEF, Quận 3, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_kinh_doanh"/>
+            <field name="chuc_vu_id" ref="chuc_vu_truong_phong"/>
+            <field name="ngay_vao_lam">2021-06-01</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_004" model="nhan.su.nhan.vien">
+            <field name="name">Phạm Thị Dung</field>
+            <field name="gioi_tinh">nu</field>
+            <field name="ngay_sinh">1993-11-25</field>
+            <field name="so_dien_thoai">0904567890</field>
+            <field name="email">phamthidung@company.com</field>
+            <field name="dia_chi">321 Đường GHI, Quận 4, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_ky_thuat"/>
+            <field name="chuc_vu_id" ref="chuc_vu_truong_phong"/>
+            <field name="ngay_vao_lam">2021-09-01</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_005" model="nhan.su.nhan.vien">
+            <field name="name">Hoàng Văn Em</field>
+            <field name="gioi_tinh">nam</field>
+            <field name="ngay_sinh">1996-07-08</field>
+            <field name="so_dien_thoai">0905678901</field>
+            <field name="email">hoangvanem@company.com</field>
+            <field name="dia_chi">654 Đường JKL, Quận 5, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_ke_toan"/>
+            <field name="chuc_vu_id" ref="chuc_vu_nhan_vien"/>
+            <field name="ngay_vao_lam">2022-01-10</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_006" model="nhan.su.nhan.vien">
+            <field name="name">Ngô Thị Phương</field>
+            <field name="gioi_tinh">nu</field>
+            <field name="ngay_sinh">1997-02-14</field>
+            <field name="so_dien_thoai">0906789012</field>
+            <field name="email">ngothiphuong@company.com</field>
+            <field name="dia_chi">987 Đường MNO, Quận 6, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_nhan_su"/>
+            <field name="chuc_vu_id" ref="chuc_vu_nhan_vien"/>
+            <field name="ngay_vao_lam">2022-04-15</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_007" model="nhan.su.nhan.vien">
+            <field name="name">Đặng Văn Giang</field>
+            <field name="gioi_tinh">nam</field>
+            <field name="ngay_sinh">1994-09-30</field>
+            <field name="so_dien_thoai">0907890123</field>
+            <field name="email">dangvangiang@company.com</field>
+            <field name="dia_chi">147 Đường PQR, Quận 7, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_kinh_doanh"/>
+            <field name="chuc_vu_id" ref="chuc_vu_truong_nhom"/>
+            <field name="ngay_vao_lam">2022-07-01</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_008" model="nhan.su.nhan.vien">
+            <field name="name">Vũ Thị Hương</field>
+            <field name="gioi_tinh">nu</field>
+            <field name="ngay_sinh">1998-04-18</field>
+            <field name="so_dien_thoai">0908901234</field>
+            <field name="email">vuthihuong@company.com</field>
+            <field name="dia_chi">258 Đường STU, Quận 8, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_ky_thuat"/>
+            <field name="chuc_vu_id" ref="chuc_vu_nhan_vien"/>
+            <field name="ngay_vao_lam">2023-02-01</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_009" model="nhan.su.nhan.vien">
+            <field name="name">Bùi Văn Khoa</field>
+            <field name="gioi_tinh">nam</field>
+            <field name="ngay_sinh">1991-12-05</field>
+            <field name="so_dien_thoai">0909012345</field>
+            <field name="email">buivankhoa@company.com</field>
+            <field name="dia_chi">369 Đường VWX, Quận 9, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_kinh_doanh"/>
+            <field name="chuc_vu_id" ref="chuc_vu_nhan_vien"/>
+            <field name="ngay_vao_lam">2023-05-15</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+        <record id="nhan_vien_010" model="nhan.su.nhan.vien">
+            <field name="name">Lý Thị Lan</field>
+            <field name="gioi_tinh">nu</field>
+            <field name="ngay_sinh">1999-06-22</field>
+            <field name="so_dien_thoai">0910123456</field>
+            <field name="email">lythilan@company.com</field>
+            <field name="dia_chi">741 Đường YZA, Quận 10, TP.HCM</field>
+            <field name="phong_ban_id" ref="phong_ky_thuat"/>
+            <field name="chuc_vu_id" ref="chuc_vu_nhan_vien"/>
+            <field name="ngay_vao_lam">2024-01-02</field>
+            <field name="trang_thai">dang_lam</field>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+        </record>
+    </data>
+</odoo>

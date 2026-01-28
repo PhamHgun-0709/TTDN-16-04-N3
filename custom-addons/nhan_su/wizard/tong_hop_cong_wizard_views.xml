@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tong_hop_cong_wizard_form" model="ir.ui.view">
+        <field name="name">nhan.su.tong.hop.cong.wizard.form</field>
+        <field name="model">nhan.su.tong.hop.cong.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="thang"/>
+                    </group>
+                    <group>
+                        <field name="nam"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_tao_tong_hop" string="Tạo tổng hợp công" type="object" class="btn-primary"/>
+                    <button string="Hủy" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

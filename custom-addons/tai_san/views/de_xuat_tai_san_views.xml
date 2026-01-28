@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_de_xuat_tai_san_tree" model="ir.ui.view">
+        <field name="name">tai.san.de.xuat.tree</field>
+        <field name="model">tai.san.de.xuat</field>
+        <field name="arch" type="xml">
+            <list decoration-info="trang_thai=='nhap'" decoration-warning="trang_thai=='cho_duyet'" decoration-success="trang_thai=='da_duyet'">
+                <field name="name"/>
+                <field name="ngay_de_xuat"/>
+                <field name="ten_tai_san"/>
+                <field name="loai_tai_san"/>
+                <field name="so_luong"/>
+                <field name="thanh_tien"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_de_xuat_tai_san_form" model="ir.ui.view">
+        <field name="name">tai.san.de.xuat.form</field>
+        <field name="model">tai.san.de.xuat</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_gui_duyet" string="Gửi duyệt" type="object" class="oe_highlight"/>
+                    <button name="action_duyet" string="Duyệt" type="object" class="oe_highlight"/>
+                    <button name="action_tu_choi" string="Từ chối" type="object"/>
+                    <button name="action_huy" string="Hủy" type="object"/>
+                    <field name="trang_thai" widget="statusbar" statusbar_visible="nhap,cho_duyet,da_duyet"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="ngay_de_xuat"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="phong_ban_id"/>
+                        </group>
+                        <group>
+                            <field name="ten_tai_san"/>
+                            <field name="loai_tai_san"/>
+                            <field name="so_luong"/>
+                            <field name="don_gia_du_kien"/>
+                            <field name="thanh_tien"/>
+                            <field name="han_mua"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="ly_do" placeholder="Lý do đề xuất..."/>
+                    </group>
+                    <group>
+                        <field name="muc_dich_su_dung" placeholder="Mục đích sử dụng..."/>
+                    </group>
+                    <notebook>
+                        <page string="Phê duyệt">
+                            <field name="phe_duyet_ids">
+                                <list editable="bottom">
+                                    <field name="cap_duyet"/>
+                                    <field name="nhan_vien_id"/>
+                                    <field name="ngay_phe_duyet"/>
+                                    <field name="ket_qua"/>
+                                    <field name="so_tien_duyet"/>
+                                    <field name="y_kien"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Ứng tiền">
+                            <field name="ung_tien_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="ngay_ung"/>
+                                    <field name="so_tien_ung"/>
+                                    <field name="so_tien_con_lai"/>
+                                    <field name="trang_thai"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Ghi chú">
+                            <field name="ghi_chu" placeholder="Ghi chú..." nolabel="1"/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids" widget="mail_followers" nolabel="1"/>
+                            <field name="activity_ids" widget="mail_activity" nolabel="1"/>
+                            <field name="message_ids" widget="mail_thread" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_de_xuat_tai_san" model="ir.actions.act_window">
+        <field name="name">Đề xuất tài sản</field>
+        <field name="res_model">tai.san.de.xuat</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+
+

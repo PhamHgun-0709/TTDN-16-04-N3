@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_canh_bao_gian_lan_tree" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.canh.bao.gian.lan.list</field>
+        <field name="model">tai.chinh.ke.toan.canh.bao.gian.lan</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="muc_do_nguy_hiem=='nghiem_trong'" 
+                  decoration-warning="muc_do_nguy_hiem=='cao'"
+                  decoration-info="muc_do_nguy_hiem=='trung_binh'">
+                <field name="ma_canh_bao"/>
+                <field name="name"/>
+                <field name="loai_gian_lan"/>
+                <field name="muc_do_nguy_hiem" widget="badge" 
+                       decoration-danger="muc_do_nguy_hiem=='nghiem_trong'"
+                       decoration-warning="muc_do_nguy_hiem=='cao'"
+                       decoration-info="muc_do_nguy_hiem=='trung_binh'"
+                       decoration-success="muc_do_nguy_hiem=='thap'"/>
+                <field name="diem_nghi_ngo"/>
+                <field name="ngay_phat_hien"/>
+                <field name="trang_thai" widget="badge"
+                       decoration-danger="trang_thai=='chua_xu_ly'"
+                       decoration-warning="trang_thai=='dang_kiem_tra'"
+                       decoration-success="trang_thai in ['da_xu_ly','khong_gian_lan']"
+                       decoration-info="trang_thai=='xac_nhan'"/>
+                <field name="nguoi_xu_ly"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_canh_bao_gian_lan_form" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.canh.bao.gian.lan.form</field>
+        <field name="model">tai.chinh.ke.toan.canh.bao.gian.lan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_bat_dau_kiem_tra" type="object" string="Bắt đầu kiểm tra" 
+                            class="oe_highlight" invisible="trang_thai != 'chua_xu_ly'"/>
+                    <button name="action_xac_nhan_gian_lan" type="object" string="Xác nhận gian lận" 
+                            class="btn-danger" invisible="trang_thai not in ['dang_kiem_tra']"/>
+                    <button name="action_khong_phai_gian_lan" type="object" string="Không phải gian lận" 
+                            class="btn-success" invisible="trang_thai not in ['dang_kiem_tra']"/>
+                    <button name="action_da_xu_ly" type="object" string="Hoàn thành xử lý" 
+                            class="oe_highlight" invisible="trang_thai not in ['xac_nhan','dang_kiem_tra']"/>
+                    <field name="trang_thai" widget="statusbar" statusbar_visible="chua_xu_ly,dang_kiem_tra,xac_nhan,da_xu_ly"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_canh_bao"/>
+                            <field name="name"/>
+                            <field name="loai_gian_lan"/>
+                            <field name="muc_do_nguy_hiem"/>
+                            <field name="diem_nghi_ngo"/>
+                        </group>
+                        <group>
+                            <field name="ngay_phat_hien"/>
+                            <field name="nguoi_phat_hien"/>
+                            <field name="nguoi_xu_ly"/>
+                            <field name="ngay_xu_ly"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="phieu_chi_id" options="{'no_create': True}"/>
+                            <field name="phieu_thu_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Mô tả chi tiết">
+                            <field name="mo_ta" placeholder="Mô tả chi tiết về dấu hiệu gian lận..." nolabel="1"/>
+                        </page>
+                        
+                        <page string="Giải pháp khuyến nghị">
+                            <field name="giai_phap" placeholder="Các bước xử lý khuyến nghị..." nolabel="1"/>
+                        </page>
+                        
+                        <page string="Chi tiết phân tích">
+                            <field name="chi_tiet_phan_tich" nolabel="1"/>
+                        </page>
+                        
+                        <page string="Xử lý">
+                            <field name="ghi_chu_xu_ly" placeholder="Ghi chú quá trình xử lý..." nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_canh_bao_gian_lan_search" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.canh.bao.gian.lan.search</field>
+        <field name="model">tai.chinh.ke.toan.canh.bao.gian.lan</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="ma_canh_bao"/>
+                <field name="loai_gian_lan"/>
+                <filter string="Chưa xử lý" name="chua_xu_ly" domain="[('trang_thai','=','chua_xu_ly')]"/>
+                <filter string="Đang kiểm tra" name="dang_kiem_tra" domain="[('trang_thai','=','dang_kiem_tra')]"/>
+                <filter string="Xác nhận gian lận" name="xac_nhan" domain="[('trang_thai','=','xac_nhan')]"/>
+                <separator/>
+                <filter string="Nghiêm trọng" name="nghiem_trong" domain="[('muc_do_nguy_hiem','=','nghiem_trong')]"/>
+                <filter string="Cao" name="cao" domain="[('muc_do_nguy_hiem','=','cao')]"/>
+                <filter string="Trung bình" name="trung_binh" domain="[('muc_do_nguy_hiem','=','trung_binh')]"/>
+                <filter string="Loại gian lận" name="group_loai" context="{'group_by':'loai_gian_lan'}"/>
+                <filter string="Mức độ" name="group_muc_do" context="{'group_by':'muc_do_nguy_hiem'}"/>
+                <filter string="Trạng thái" name="group_trang_thai" context="{'group_by':'trang_thai'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_canh_bao_gian_lan_kanban" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.canh.bao.gian.lan.kanban</field>
+        <field name="model">tai.chinh.ke.toan.canh.bao.gian.lan</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="ma_canh_bao"/>
+                <field name="name"/>
+                <field name="loai_gian_lan"/>
+                <field name="muc_do_nguy_hiem"/>
+                <field name="diem_nghi_ngo"/>
+                <field name="trang_thai"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="ma_canh_bao"/>: <field name="name"/>
+                                    </strong>
+                                </div>
+                                <field name="muc_do_nguy_hiem" widget="badge"
+                                       decoration-danger="muc_do_nguy_hiem=='nghiem_trong'"
+                                       decoration-warning="muc_do_nguy_hiem=='cao'"
+                                       decoration-info="muc_do_nguy_hiem=='trung_binh'"
+                                       decoration-success="muc_do_nguy_hiem=='thap'"/>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <field name="loai_gian_lan"/>
+                                <br/>
+                                Điểm nghi ngờ: <field name="diem_nghi_ngo"/>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                    <field name="ngay_phat_hien" widget="date"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="trang_thai" widget="badge"
+                                           decoration-danger="trang_thai=='chua_xu_ly'"
+                                           decoration-warning="trang_thai=='dang_kiem_tra'"
+                                           decoration-success="trang_thai in ['da_xu_ly','khong_gian_lan']"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_canh_bao_gian_lan" model="ir.actions.act_window">
+        <field name="name">Cảnh báo gian lận</field>
+        <field name="res_model">tai.chinh.ke.toan.canh.bao.gian.lan</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="context">{'search_default_chua_xu_ly': 1, 'search_default_dang_kiem_tra': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Chưa có cảnh báo gian lận nào!
+            </p>
+            <p>
+                Hệ thống AI sẽ tự động phát hiện các dấu hiệu bất thường trong giao dịch tài chính.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_canh_bao_gian_lan"
+              name="🚨 AI Phát hiện gian lận"
+              parent="menu_tai_chinh_ke_toan_root"
+              action="action_canh_bao_gian_lan"
+              sequence="50"/>
+</odoo>

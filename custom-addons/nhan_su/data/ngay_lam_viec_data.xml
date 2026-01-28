@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Security: Model Access Rights -->
+    <record id="access_nhan_su_ngay_lam_viec_user" model="ir.model.access">
+        <field name="name">nhan.su.ngay.lam.viec.user</field>
+        <field name="model_id" ref="model_nhan_su_ngay_lam_viec"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_nhan_su_ngay_lam_viec_manager" model="ir.model.access">
+        <field name="name">nhan.su.ngay.lam.viec.manager</field>
+        <field name="model_id" ref="model_nhan_su_ngay_lam_viec"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- Demo Data: Ngày làm việc trong tuần -->
+    <record id="ngay_thu_2" model="nhan.su.ngay.lam.viec">
+        <field name="name">Thứ Hai</field>
+        <field name="ma_ngay">thu2</field>
+        <field name="thu_tu">1</field>
+        <field name="la_ngay_lam_viec" eval="True"/>
+    </record>
+
+    <record id="ngay_thu_3" model="nhan.su.ngay.lam.viec">
+        <field name="name">Thứ Ba</field>
+        <field name="ma_ngay">thu3</field>
+        <field name="thu_tu">2</field>
+        <field name="la_ngay_lam_viec" eval="True"/>
+    </record>
+
+    <record id="ngay_thu_4" model="nhan.su.ngay.lam.viec">
+        <field name="name">Thứ Tư</field>
+        <field name="ma_ngay">thu4</field>
+        <field name="thu_tu">3</field>
+        <field name="la_ngay_lam_viec" eval="True"/>
+    </record>
+
+    <record id="ngay_thu_5" model="nhan.su.ngay.lam.viec">
+        <field name="name">Thứ Năm</field>
+        <field name="ma_ngay">thu5</field>
+        <field name="thu_tu">4</field>
+        <field name="la_ngay_lam_viec" eval="True"/>
+    </record>
+
+    <record id="ngay_thu_6" model="nhan.su.ngay.lam.viec">
+        <field name="name">Thứ Sáu</field>
+        <field name="ma_ngay">thu6</field>
+        <field name="thu_tu">5</field>
+        <field name="la_ngay_lam_viec" eval="True"/>
+    </record>
+
+    <record id="ngay_thu_7" model="nhan.su.ngay.lam.viec">
+        <field name="name">Thứ Bảy</field>
+        <field name="ma_ngay">thu7</field>
+        <field name="thu_tu">6</field>
+        <field name="la_ngay_lam_viec" eval="False"/>
+    </record>
+
+    <record id="ngay_chu_nhat" model="nhan.su.ngay.lam.viec">
+        <field name="name">Chủ Nhật</field>
+        <field name="ma_ngay">cn</field>
+        <field name="thu_tu">7</field>
+        <field name="la_ngay_lam_viec" eval="False"/>
+    </record>
+</odoo>

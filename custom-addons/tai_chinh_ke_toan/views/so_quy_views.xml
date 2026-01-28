@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_so_quy_tree" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.so.quy.tree</field>
+        <field name="model">tai.chinh.ke.toan.so.quy</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="ngay_ghi_so"/>
+                <field name="name"/>
+                <field name="loai_phieu"/>
+                <field name="doi_tuong_id"/>
+                <field name="dien_giai"/>
+                <field name="so_tien_thu" sum="Tổng thu"/>
+                <field name="so_tien_chi" sum="Tổng chi"/>
+                <field name="ton_quy"/>
+                <field name="hinh_thuc"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_so_quy_form" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.so.quy.form</field>
+        <field name="model">tai.chinh.ke.toan.so.quy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="ngay_ghi_so"/>
+                            <field name="loai_phieu"/>
+                        </group>
+                        <group>
+                            <field name="doi_tuong_id"/>
+                            <field name="hinh_thuc"/>
+                            <field name="tai_khoan_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="dien_giai" placeholder="Diễn giải..." nolabel="1"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="so_tien_thu"/>
+                            <field name="so_tien_chi"/>
+                        </group>
+                        <group>
+                            <field name="ton_quy"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="phieu_thu_id"/>
+                            <field name="phieu_chi_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Ghi chú">
+                            <field name="ghi_chu" placeholder="Ghi chú..." nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_so_quy" model="ir.actions.act_window">
+        <field name="name">Sổ quỹ</field>
+        <field name="res_model">tai.chinh.ke.toan.so.quy</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

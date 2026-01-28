@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_phong_ban_tree" model="ir.ui.view">
+        <field name="name">nhan.su.phong.ban.tree</field>
+        <field name="model">nhan.su.phong.ban</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="ma_phong_ban"/>
+                <field name="name"/>
+                <field name="truong_phong_id"/>
+                <field name="phong_ban_cha_id"/>
+                <field name="so_luong_nhan_vien"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_phong_ban_form" model="ir.ui.view">
+        <field name="name">nhan.su.phong.ban.form</field>
+        <field name="model">nhan.su.phong.ban</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_phong_ban"/>
+                            <field name="name"/>
+                            <field name="truong_phong_id"/>
+                        </group>
+                        <group>
+                            <field name="phong_ban_cha_id"/>
+                            <field name="so_luong_nhan_vien" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Nhân viên">
+                            <field name="nhan_vien_ids">
+                                <list>
+                                    <field name="ma_nhan_vien"/>
+                                    <field name="name"/>
+                                    <field name="chuc_vu_id"/>
+                                    <field name="so_dien_thoai"/>
+                                    <field name="trang_thai"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Mô tả">
+                            <field name="mo_ta" nolabel="1"/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_phong_ban" model="ir.actions.act_window">
+        <field name="name">Phòng ban</field>
+        <field name="res_model">nhan.su.phong.ban</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

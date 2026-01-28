@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Wizard Form View -->
+    <record id="view_thanh_toan_hang_loat_form" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.thanh.toan.hang.loat.form</field>
+        <field name="model">tai.chinh.ke.toan.thanh.toan.hang.loat</field>
+        <field name="arch" type="xml">
+            <form string="Thanh toán hàng loạt">
+                <group>
+                    <group>
+                        <field name="loai_phieu" widget="radio"/>
+                        <field name="tong_so_phieu"/>
+                        <field name="tong_tien" widget="monetary"/>
+                    </group>
+                    <group>
+                        <field name="phieu_ids" invisible="1"/>
+                        <field name="phieu_thu_ids" invisible="1"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="ghi_chu" placeholder="Ghi chú (tùy chọn)"/>
+                </group>
+                <footer>
+                    <button string="Thực hiện" name="action_thuc_hien" type="object" class="btn-primary"/>
+                    <button string="Xem danh sách" name="action_xem_danh_sach" type="object" class="btn-secondary"/>
+                    <button string="Hủy" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_thanh_toan_hang_loat_chi" model="ir.actions.act_window">
+        <field name="name">Chi tiền hàng loạt</field>
+        <field name="res_model">tai.chinh.ke.toan.thanh.toan.hang.loat</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_tai_chinh_ke_toan_phieu_chi"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+    <record id="action_thanh_toan_hang_loat_thu" model="ir.actions.act_window">
+        <field name="name">Thu tiền hàng loạt</field>
+        <field name="res_model">tai.chinh.ke.toan.thanh.toan.hang.loat</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_tai_chinh_ke_toan_phieu_thu"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+</odoo>

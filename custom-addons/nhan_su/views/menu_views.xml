@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_nhan_su_root"
+              name="👥 Nhân sự"
+              sequence="10"
+              web_icon="nhan_su,static/description/icon.png"/>
+
+    <!-- Dashboard -->
+    <menuitem id="menu_nhan_su_dashboard"
+              name="📊 Dashboard"
+              parent="menu_nhan_su_root"
+              action="action_nhan_su_dashboard"
+              sequence="5"/>
+
+    <!-- Nhóm Danh mục -->
+    <menuitem id="menu_nhan_su_danh_muc"
+              name="📁 Danh mục"
+              parent="menu_nhan_su_root"
+              sequence="10"/>
+    
+    <menuitem id="menu_nhan_su_phong_ban"
+              name="Phòng ban"
+              parent="menu_nhan_su_danh_muc"
+              action="action_phong_ban"
+              sequence="10"/>
+    
+    <menuitem id="menu_nhan_su_chuc_vu"
+              name="Chức vụ"
+              parent="menu_nhan_su_danh_muc"
+              action="action_chuc_vu"
+              sequence="20"/>
+    
+    <menuitem id="menu_nhan_su_ca_lam_viec"
+              name="Ca làm việc"
+              parent="menu_nhan_su_danh_muc"
+              action="action_ca_lam_viec"
+              sequence="30"/>
+
+    <!-- Nhân viên -->
+    <menuitem id="menu_nhan_su_nhan_vien"
+              name="Nhân viên"
+              parent="menu_nhan_su_root"
+              action="action_nhan_vien"
+              sequence="20"/>
+    
+    <!-- Nhóm Chấm công -->
+    <menuitem id="menu_nhan_su_cham_cong_group"
+              name="Chấm công"
+              parent="menu_nhan_su_root"
+              sequence="30"/>
+    
+    <menuitem id="menu_nhan_su_cham_cong"
+              name="Bảng chấm công"
+              parent="menu_nhan_su_cham_cong_group"
+              action="action_cham_cong"
+              sequence="10"/>
+    
+    <menuitem id="menu_nhan_su_tong_hop_cong"
+              name="Tổng hợp công"
+              parent="menu_nhan_su_cham_cong_group"
+              action="action_tong_hop_cong"
+              sequence="20"/>
+    
+    <!-- Nhóm Bảng lương -->
+    <menuitem id="menu_nhan_su_bang_luong_group"
+              name="Bảng lương"
+              parent="menu_nhan_su_root"
+              sequence="40"/>
+    
+    <menuitem id="menu_nhan_su_bang_luong"
+              name="Bảng lương"
+              parent="menu_nhan_su_bang_luong_group"
+              action="action_bang_luong"
+              sequence="10"/>
+    
+    <menuitem id="menu_nhan_su_chi_tiet_luong"
+              name="Phiếu lương"
+              parent="menu_nhan_su_bang_luong_group"
+              action="action_chi_tiet_luong"
+              sequence="20"/>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Cập nhật ca làm việc: sử dụng chế độ sáng/chiều -->
+        <record id="ca_lam_viec_hanh_chinh" model="nhan.su.ca.lam.viec">
+            <field name="su_dung_ca_sang_chieu" eval="True"/>
+            <field name="gio_bat_dau_sang" eval="8.5"/>
+            <field name="gio_ket_thuc_sang" eval="12.0"/>
+            <field name="gio_bat_dau_chieu" eval="13.0"/>
+            <field name="gio_ket_thuc_chieu" eval="17.5"/>
+            <field name="ngay_lam_viec_ids" eval="[(6, 0, [ref('ngay_thu_2'), ref('ngay_thu_3'), ref('ngay_thu_4'), ref('ngay_thu_5'), ref('ngay_thu_6')])]"/>
+        </record>
+
+        <record id="ca_lam_viec_linh_hoat" model="nhan.su.ca.lam.viec">
+            <field name="su_dung_ca_sang_chieu" eval="True"/>
+            <field name="gio_bat_dau_sang" eval="8.5"/>
+            <field name="gio_ket_thuc_sang" eval="12.0"/>
+            <field name="gio_bat_dau_chieu" eval="13.0"/>
+            <field name="gio_ket_thuc_chieu" eval="17.5"/>
+            <field name="ngay_lam_viec_ids" eval="[(6, 0, [ref('ngay_thu_2'), ref('ngay_thu_3'), ref('ngay_thu_4'), ref('ngay_thu_5'), ref('ngay_thu_6')])]"/>
+        </record>
+    </data>
+</odoo>

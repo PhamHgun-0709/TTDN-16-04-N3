@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sequence for Phiếu Chi -->
+    <record id="seq_phieu_chi" model="ir.sequence">
+        <field name="name">Phiếu Chi</field>
+        <field name="code">tai.chinh.ke.toan.phieu.chi</field>
+        <field name="prefix">PC/%(year)s/</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <!-- Sequence for Phiếu Thu -->
+    <record id="seq_phieu_thu" model="ir.sequence">
+        <field name="name">Phiếu Thu</field>
+        <field name="code">tai.chinh.ke.toan.phieu.thu</field>
+        <field name="prefix">PT/%(year)s/</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <!-- Sequence for Khấu hao tài sản -->
+    <record id="seq_khau_hao_tai_san" model="ir.sequence">
+        <field name="name">Khấu hao tài sản</field>
+        <field name="code">tai.chinh.ke.toan.khau.hao.tai.san</field>
+        <field name="prefix">KH/%(year)s/</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

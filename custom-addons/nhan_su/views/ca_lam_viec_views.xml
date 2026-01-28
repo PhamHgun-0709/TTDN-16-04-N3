@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_ca_lam_viec_tree" model="ir.ui.view">
+        <field name="name">nhan.su.ca.lam.viec.tree</field>
+        <field name="model">nhan.su.ca.lam.viec</field>
+        <field name="arch" type="xml">
+            <list string="Ca làm việc">
+                <field name="ma_ca"/>
+                <field name="name"/>
+                <field name="loai_ca"/>
+                <field name="gio_bat_dau" widget="float_time"/>
+                <field name="gio_ket_thuc" widget="float_time"/>
+                <field name="so_gio_chuan"/>
+                <field name="cho_phep_di_muon"/>
+                <field name="cho_phep_ve_som"/>
+                <field name="he_so_tang_ca"/>
+                <field name="so_luong_nhan_vien"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_ca_lam_viec_form" model="ir.ui.view">
+        <field name="name">nhan.su.ca.lam.viec.form</field>
+        <field name="model">nhan.su.ca.lam.viec</field>
+        <field name="arch" type="xml">
+            <form string="Ca làm việc">
+                <sheet>
+                    <group col="2">
+                        <field name="ma_ca"/>
+                        <field name="name"/>
+                        <field name="loai_ca"/>
+                        <field name="so_luong_nhan_vien"/>
+                        <field name="active"/>
+                    </group>
+                    <notebook>
+                        <page string="Giờ làm việc">
+                            <group>
+                                <field name="su_dung_ca_sang_chieu"/>
+                            </group>
+                            <group invisible="su_dung_ca_sang_chieu">
+                                <group string="Giờ chuẩn (Chế độ cũ)">
+                                    <field name="gio_bat_dau" widget="float_time"/>
+                                    <field name="gio_ket_thuc" widget="float_time"/>
+                                    <field name="so_gio_chuan"/>
+                                </group>
+                                <group string="Dung sai">
+                                    <field name="cho_phep_di_muon"/> phút
+                                    <field name="cho_phep_ve_som"/> phút
+                                </group>
+                            </group>
+                            <group invisible="not su_dung_ca_sang_chieu">
+                                <group string="Ca sáng">
+                                    <field name="gio_bat_dau_sang" widget="float_time"/>
+                                    <field name="gio_ket_thuc_sang" widget="float_time"/>
+                                </group>
+                                <group string="Ca chiều">
+                                    <field name="gio_bat_dau_chieu" widget="float_time"/>
+                                    <field name="gio_ket_thuc_chieu" widget="float_time"/>
+                                </group>
+                            </group>
+                            <group invisible="not su_dung_ca_sang_chieu">
+                                <group string="Tổng số giờ">
+                                    <field name="so_gio_chuan"/>
+                                </group>
+                                <group string="Dung sai">
+                                    <field name="cho_phep_di_muon"/> phút
+                                    <field name="cho_phep_ve_som"/> phút
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Ngày làm việc" invisible="not su_dung_ca_sang_chieu">
+                            <field name="ngay_lam_viec_ids">
+                                <list>
+                                    <field name="thu_tu"/>
+                                    <field name="name"/>
+                                    <field name="ma_ngay"/>
+                                    <field name="la_ngay_lam_viec"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Tăng ca">
+                            <group col="2">
+                                <field name="bat_dau_tinh_tang_ca" widget="float_time"/>
+                                <field name="he_so_tang_ca"/>
+                            </group>
+                        </page>
+                        <page string="Nhân viên">
+                            <field name="nhan_vien_ids">
+                                <list>
+                                    <field name="ma_nhan_vien"/>
+                                    <field name="name"/>
+                                    <field name="phong_ban_id"/>
+                                    <field name="chuc_vu_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_ca_lam_viec_search" model="ir.ui.view">
+        <field name="name">nhan.su.ca.lam.viec.search</field>
+        <field name="model">nhan.su.ca.lam.viec</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_ca_lam_viec" model="ir.actions.act_window">
+        <field name="name">Ca làm việc</field>
+        <field name="res_model">nhan.su.ca.lam.viec</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Tạo ca làm việc mới
+            </p>
+        </field>
+    </record>
+</odoo>
+
+

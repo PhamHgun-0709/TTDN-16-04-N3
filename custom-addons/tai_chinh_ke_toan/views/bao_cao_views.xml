@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Wizard Form View - Báo cáo Thu Chi -->
+    <record id="view_bao_cao_thu_chi_form" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.bao.cao.thu.chi.form</field>
+        <field name="model">tai.chinh.ke.toan.bao.cao.thu.chi</field>
+        <field name="arch" type="xml">
+            <form string="Báo cáo thu chi">
+                <group>
+                    <group>
+                        <field name="tu_ngay" required="1"/>
+                        <field name="den_ngay" required="1"/>
+                    </group>
+                    <group>
+                        <field name="loai_bao_cao" required="1"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Xem báo cáo" name="action_xem_bao_cao" type="object" class="btn-primary"/>
+                    <button string="Xuất Excel" name="action_xuat_excel" type="object" class="btn-secondary"/>
+                    <button string="Hủy" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Form View - Báo cáo Sổ Quỹ -->
+    <record id="view_bao_cao_so_quy_form" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.bao.cao.so.quy.form</field>
+        <field name="model">tai.chinh.ke.toan.bao.cao.so.quy</field>
+        <field name="arch" type="xml">
+            <form string="Báo cáo sổ quỹ">
+                <group>
+                    <group>
+                        <field name="tu_ngay" required="1"/>
+                        <field name="den_ngay" required="1"/>
+                    </group>
+                    <group>
+                        <field name="hinh_thuc" required="1"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Xem báo cáo" name="action_xem_bao_cao" type="object" class="btn-primary"/>
+                    <button string="In báo cáo" name="action_in_bao_cao" type="object" class="btn-secondary"/>
+                    <button string="Hủy" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_bao_cao_thu_chi" model="ir.actions.act_window">
+        <field name="name">Báo cáo thu chi</field>
+        <field name="res_model">tai.chinh.ke.toan.bao.cao.thu.chi</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_bao_cao_so_quy" model="ir.actions.act_window">
+        <field name="name">Báo cáo sổ quỹ</field>
+        <field name="res_model">tai.chinh.ke.toan.bao.cao.so.quy</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

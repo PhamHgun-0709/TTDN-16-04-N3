@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Phiếu thu -->
+    <record id="phieu_thu_001" model="tai.chinh.ke.toan.phieu.thu">
+        <field name="name">PT2025/001</field>
+        <field name="ngay_lap">2025-01-05</field>
+        <field name="doi_tuong_id" ref="base.res_partner_1"/>
+        <field name="ly_do_thu">Thu tiền bán hàng tháng 12/2024</field>
+        <field name="so_tien">150000000</field>
+        <field name="hinh_thuc_thanh_toan">chuyen_khoan</field>
+        <field name="loai_thu">ban_hang</field>
+        <field name="trang_thai">da_thu</field>
+        <field name="ngay_thu">2025-01-05</field>
+        <field name="nguoi_nop">Nguyễn Văn A</field>
+    </record>
+
+    <record id="phieu_thu_002" model="tai.chinh.ke.toan.phieu.thu">
+        <field name="name">PT2025/002</field>
+        <field name="ngay_lap">2025-01-08</field>
+        <field name="doi_tuong_id" ref="base.res_partner_2"/>
+        <field name="ly_do_thu">Thu tiền dịch vụ tư vấn</field>
+        <field name="so_tien">50000000</field>
+        <field name="hinh_thuc_thanh_toan">tien_mat</field>
+        <field name="loai_thu">dich_vu</field>
+        <field name="trang_thai">da_duyet</field>
+        <field name="ngay_thu">2025-01-08</field>
+        <field name="nguoi_nop">Trần Thị B</field>
+    </record>
+
+    <record id="phieu_thu_003" model="tai.chinh.ke.toan.phieu.thu">
+        <field name="name">PT2025/003</field>
+        <field name="ngay_lap">2025-01-10</field>
+        <field name="doi_tuong_id" ref="base.res_partner_3"/>
+        <field name="ly_do_thu">Thu tiền bán hàng tháng 1/2025</field>
+        <field name="so_tien">200000000</field>
+        <field name="hinh_thuc_thanh_toan">chuyen_khoan</field>
+        <field name="loai_thu">ban_hang</field>
+        <field name="trang_thai">cho_duyet</field>
+    </record>
+
+    <record id="phieu_thu_004" model="tai.chinh.ke.toan.phieu.thu">
+        <field name="name">PT2025/004</field>
+        <field name="ngay_lap">2025-01-12</field>
+        <field name="doi_tuong_id" ref="base.res_partner_4"/>
+        <field name="ly_do_thu">Thu tiền thanh lý tài sản cũ</field>
+        <field name="so_tien">25000000</field>
+        <field name="hinh_thuc_thanh_toan">tien_mat</field>
+        <field name="loai_thu">khac</field>
+        <field name="trang_thai">da_thu</field>
+        <field name="ngay_thu">2025-01-12</field>
+    </record>
+
+    <!-- Phiếu chi -->
+    <record id="phieu_chi_001" model="tai.chinh.ke.toan.phieu.chi">
+        <field name="name">PC2025/001</field>
+        <field name="ngay_lap">2025-01-03</field>
+        <field name="doi_tuong_id" ref="base.res_partner_10"/>
+        <field name="ly_do_chi">Mua văn phòng phẩm tháng 1</field>
+        <field name="so_tien">5000000</field>
+        <field name="hinh_thuc_thanh_toan">tien_mat</field>
+        <field name="loai_chi">van_phong</field>
+        <field name="trang_thai">da_chi</field>
+        <field name="ngay_chi">2025-01-03</field>
+        <field name="nguoi_nhan">Công ty TNHH ABC</field>
+    </record>
+
+    <record id="phieu_chi_002" model="tai.chinh.ke.toan.phieu.chi">
+        <field name="name">PC2025/002</field>
+        <field name="ngay_lap">2025-01-05</field>
+        <field name="nhan_vien_id" ref="nhan_su.nhan_vien_001"/>
+        <field name="doi_tuong_id" ref="base.res_partner_11"/>
+        <field name="ly_do_chi">Chi lương tháng 12/2024</field>
+        <field name="so_tien">180000000</field>
+        <field name="hinh_thuc_thanh_toan">chuyen_khoan</field>
+        <field name="loai_chi">chi_luong</field>
+        <field name="trang_thai">da_chi</field>
+        <field name="ngay_chi">2025-01-05</field>
+    </record>
+
+    <record id="phieu_chi_003" model="tai.chinh.ke.toan.phieu.chi">
+        <field name="name">PC2025/003</field>
+        <field name="ngay_lap">2025-01-07</field>
+        <field name="doi_tuong_id" ref="base.res_partner_12"/>
+        <field name="ly_do_chi">Thanh toán tiền điện nước tháng 12</field>
+        <field name="so_tien">15000000</field>
+        <field name="hinh_thuc_thanh_toan">chuyen_khoan</field>
+        <field name="loai_chi">dich_vu</field>
+        <field name="trang_thai">da_duyet</field>
+    </record>
+
+    <record id="phieu_chi_004" model="tai.chinh.ke.toan.phieu.chi">
+        <field name="name">PC2025/004</field>
+        <field name="ngay_lap">2025-01-09</field>
+        <field name="doi_tuong_id" ref="base.res_partner_2"/>
+        <field name="ly_do_chi">Mua laptop Dell Latitude</field>
+        <field name="so_tien">25000000</field>
+        <field name="hinh_thuc_thanh_toan">chuyen_khoan</field>
+        <field name="loai_chi">tai_san</field>
+        <field name="trang_thai">cho_duyet</field>
+    </record>
+
+    <record id="phieu_chi_005" model="tai.chinh.ke.toan.phieu.chi">
+        <field name="name">PC2025/005</field>
+        <field name="ngay_lap">2025-01-11</field>
+        <field name="doi_tuong_id" ref="base.res_partner_3"/>
+        <field name="ly_do_chi">Thuê dịch vụ bảo trì máy móc</field>
+        <field name="so_tien">8000000</field>
+        <field name="hinh_thuc_thanh_toan">tien_mat</field>
+        <field name="loai_chi">dich_vu</field>
+        <field name="trang_thai">da_chi</field>
+        <field name="ngay_chi">2025-01-11</field>
+    </record>
+
+    <!-- Khấu hao tài sản -->
+    <record id="khau_hao_001" model="tai.chinh.ke.toan.khau.hao.tai.san">
+        <field name="name">KH2023/001</field>
+        <field name="tai_san_id" ref="tai_san.tai_san_001"/>
+        <field name="phuong_phap_khau_hao">duong_thang</field>
+        <field name="nguyen_gia">25000000</field>
+        <field name="gia_tri_con_lai">12500000</field>
+        <field name="thoi_gian_khau_hao">36</field>
+        <field name="da_khau_hao">18</field>
+        <field name="ngay_bat_dau_khau_hao">2023-02-01</field>
+        <field name="trang_thai">dang_khau_hao</field>
+    </record>
+
+    <record id="khau_hao_002" model="tai.chinh.ke.toan.khau.hao.tai.san">
+        <field name="name">KH2022/001</field>
+        <field name="tai_san_id" ref="tai_san.tai_san_002"/>
+        <field name="phuong_phap_khau_hao">duong_thang</field>
+        <field name="nguyen_gia">3500000</field>
+        <field name="gia_tri_con_lai">1750000</field>
+        <field name="thoi_gian_khau_hao">24</field>
+        <field name="da_khau_hao">12</field>
+        <field name="ngay_bat_dau_khau_hao">2022-07-01</field>
+        <field name="trang_thai">dang_khau_hao</field>
+    </record>
+
+    <record id="khau_hao_003" model="tai.chinh.ke.toan.khau.hao.tai.san">
+        <field name="name">KH2021/001</field>
+        <field name="tai_san_id" ref="tai_san.tai_san_003"/>
+        <field name="phuong_phap_khau_hao">duong_thang</field>
+        <field name="nguyen_gia">550000000</field>
+        <field name="gia_tri_con_lai">330000000</field>
+        <field name="thoi_gian_khau_hao">96</field>
+        <field name="da_khau_hao">44</field>
+        <field name="ngay_bat_dau_khau_hao">2021-04-01</field>
+        <field name="trang_thai">dang_khau_hao</field>
+    </record>
+</odoo>

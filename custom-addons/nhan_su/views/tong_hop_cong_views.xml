@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_tong_hop_cong_tree" model="ir.ui.view">
+        <field name="name">nhan.su.tong.hop.cong.tree</field>
+        <field name="model">nhan.su.tong.hop.cong</field>
+        <field name="arch" type="xml">
+            <list string="Tổng hợp công" decoration-success="trang_thai=='da_xac_nhan'" decoration-info="trang_thai=='da_tinh_luong'">
+                <header>
+                    <button name="action_tao_tong_hop_hang_loat" string="📅 Tạo tổng hợp công theo tháng" type="object" class="btn-primary"/>
+                    <button name="action_xac_nhan_hang_loat" string="✅ Xác nhận hàng loạt" type="object" class="btn-success"/>
+                </header>
+                <field name="name"/>
+                <field name="nhan_vien_id"/>
+                <field name="phong_ban_id"/>
+                <field name="thang"/>
+                <field name="nam"/>
+                <field name="tong_cong"/>
+                <field name="tong_gio_tang_ca"/>
+                <field name="cong_quy_doi_luong"/>
+                <field name="so_ngay_vang"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_tong_hop_cong_form" model="ir.ui.view">
+        <field name="name">nhan.su.tong.hop.cong.form</field>
+        <field name="model">nhan.su.tong.hop.cong</field>
+        <field name="arch" type="xml">
+            <form string="Tổng hợp công">
+                <header>
+                    <button name="action_lay_du_lieu_cham_cong" string="Lấy dữ liệu chấm công" type="object" class="oe_highlight"/>
+                    <button name="action_xac_nhan" string="Xác nhận" type="object" class="oe_highlight"/>
+                    <button name="action_huy_xac_nhan" string="Hủy xác nhận" type="object"/>
+                    <button name="action_tao_bang_luong_thang" string="📊 Tạo bảng lương tháng này" 
+                            type="object" class="btn-primary" 
+                            invisible="trang_thai != 'da_xac_nhan'"
+                            help="Tạo bảng lương cho tất cả nhân viên có tổng hợp công đã xác nhận trong tháng"/>
+                    <field name="trang_thai" widget="statusbar" statusbar_visible="nhap,da_xac_nhan,da_tinh_luong"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(action_cham_cong)d" type="action" class="oe_stat_button" icon="fa-calendar"
+                                context="{'default_nhan_vien_id': nhan_vien_id, 'search_default_nhan_vien_id': nhan_vien_id, 'search_default_thang': thang, 'search_default_nam': nam}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field name="so_ngay_lam_viec"/></span>
+                                <span class="o_stat_text">Ngày làm việc</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group name="stats" string="📊 TỔNG HỢP">
+                            <div class="o_form_field o_stat_info" style="padding: 10px; background: #e8f5e9; border-radius: 5px;">
+                                <span class="o_stat_value" style="font-size: 24px; color: #4caf50;">
+                                    <field name="cong_quy_doi_luong" nolabel="1"/>
+                                </span>
+                                <span class="o_stat_text">Công quy đổi lương</span>
+                            </div>
+                        </group>
+                    </group>
+                    <group col="2">
+                        <field name="nhan_vien_id"/>
+                        <field name="phong_ban_id"/>
+                        <field name="ca_lam_viec_id"/>
+                        <field name="thang"/>
+                        <field name="nam"/>
+                        <field name="cong_chuan_thang"/>
+                    </group>
+                    <notebook>
+                        <page string="Tổng hợp">
+                            <group>
+                                <group string="Công">
+                                    <field name="so_ngay_lam_viec"/>
+                                    <field name="tong_cong"/>
+                                    <field name="so_ngay_du_cong"/>
+                                    <field name="so_ngay_thieu_cong"/>
+                                </group>
+                                <group string="Tăng ca">
+                                    <field name="tong_gio_tang_ca"/>
+                                    <field name="he_so_tang_ca"/>
+                                    <field name="cong_tang_ca"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Nghỉ">
+                                    <field name="so_ngay_vang"/>
+                                    <field name="so_ngay_nghi_phep"/>
+                                    <field name="so_ngay_nghi_khong_phep"/>
+                                </group>
+                                <group string="Vi phạm">
+                                    <field name="so_lan_di_muon"/>
+                                    <field name="so_lan_ve_som"/>
+                                </group>
+                            </group>
+                            <group col="2">
+                                <field name="cong_quy_doi_luong" class="oe_inline oe_left" style="font-size:18px;font-weight:bold;color:green;"/>
+                            </group>
+                        </page>
+                        <page string="Chi tiết chấm công">
+                            <field name="cham_cong_ids">
+                                <list>
+                                    <field name="ngay_cham_cong"/>
+                                    <field name="gio_vao" widget="float_time"/>
+                                    <field name="gio_ra" widget="float_time"/>
+                                    <field name="so_gio_thuc_te"/>
+                                    <field name="so_gio_chuan"/>
+                                    <field name="di_muon_phut"/>
+                                    <field name="ve_som_phut"/>
+                                    <field name="so_cong"/>
+                                    <field name="so_gio_tang_ca"/>
+                                    <field name="trang_thai"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Ghi chú">
+                            <field name="ghi_chu" nolabel="1" placeholder="Ghi chú..."/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_tong_hop_cong_search" model="ir.ui.view">
+        <field name="name">nhan.su.tong.hop.cong.search</field>
+        <field name="model">nhan.su.tong.hop.cong</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nhan_vien_id"/>
+                <field name="thang"/>
+                <field name="nam"/>
+                <filter string="Năm" name="group_nam" context="{'group_by':'nam'}"/>
+                <filter string="Tháng" name="group_thang" context="{'group_by':'thang'}"/>
+                <filter string="Nhân viên" name="group_nhan_vien" context="{'group_by':'nhan_vien_id'}"/>
+                <filter string="Phòng ban" name="group_phong_ban" context="{'group_by':'phong_ban_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action tạo tổng hợp công hàng loạt -->
+    <record id="action_tao_tong_hop_cong_hang_loat" model="ir.actions.server">
+        <field name="name">Tạo tổng hợp công theo tháng</field>
+        <field name="model_id" ref="model_nhan_su_tong_hop_cong"/>
+        <field name="binding_model_id" ref="model_nhan_su_tong_hop_cong"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = model.action_tao_tong_hop_hang_loat()</field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_tong_hop_cong" model="ir.actions.act_window">
+        <field name="name">Tổng hợp công</field>
+        <field name="res_model">nhan.su.tong.hop.cong</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_group_nam': 1, 'search_default_group_thang': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Tạo bảng tổng hợp công mới
+            </p>
+        </field>
+    </record>
+</odoo>
+
+

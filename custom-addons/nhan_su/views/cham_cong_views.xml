@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_cham_cong_tree" model="ir.ui.view">
+        <field name="name">nhan.su.cham.cong.tree</field>
+        <field name="model">nhan.su.cham.cong</field>
+        <field name="arch" type="xml">
+            <list decoration-success="trang_thai=='du_cong'" 
+                  decoration-warning="trang_thai in ['di_tre','ve_som','thieu_cong']" 
+                  decoration-danger="trang_thai in ['vang','nghi_khong_phep']"
+                  decoration-info="trang_thai in ['nghi_phep','cong_tac']">
+                <field name="name"/>
+                <field name="nhan_vien_id"/>
+                <field name="phong_ban_id"/>
+                <field name="ca_lam_viec_id"/>
+                <field name="ngay_cham_cong"/>
+                <field name="gio_vao" widget="float_time"/>
+                <field name="gio_ra" widget="float_time"/>
+                <field name="so_gio_thuc_te"/>
+                <field name="so_gio_chuan"/>
+                <field name="so_cong"/>
+                <field name="so_gio_tang_ca"/>
+                <field name="trang_thai"/>
+                <field name="xac_nhan_hr" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_cham_cong_form" model="ir.ui.view">
+        <field name="name">nhan.su.cham.cong.form</field>
+        <field name="model">nhan.su.cham.cong</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_check_in" type="object" class="oe_stat_button" icon="fa-sign-in" style="background:#28a745; color:white;">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Check-in</span>
+                            </div>
+                        </button>
+                        <button name="action_check_out" type="object" class="oe_stat_button" icon="fa-sign-out" style="background:#dc3545; color:white;">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Check-out</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="phong_ban_id" readonly="1"/>
+                            <field name="ca_lam_viec_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="ngay_cham_cong"/>
+                            <field name="thang" readonly="1"/>
+                            <field name="nam" readonly="1"/>
+                            <field name="loai_ngay"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Giờ công">
+                            <group>
+                                <group string="⏰ Dữ liệu thô">
+                                    <field name="gio_vao" widget="float_time" readonly="1"/>
+                                    <field name="gio_ra" widget="float_time" readonly="1"/>
+                                    <field name="so_gio_thuc_te" readonly="1"/>
+                                </group>
+                                <group string="Ca làm việc">
+                                    <field name="gio_bat_dau_ca" widget="float_time"/>
+                                    <field name="gio_ket_thuc_ca" widget="float_time"/>
+                                    <field name="so_gio_chuan"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Kết quả">
+                            <group>
+                                <group string="Đánh giá">
+                                    <field name="di_muon_phut"/> phút
+                                    <field name="ve_som_phut"/> phút
+                                    <field name="du_cong"/>
+                                    <field name="thieu_cong"/>
+                                </group>
+                                <group string="Tính công">
+                                    <field name="so_cong" class="oe_inline oe_left" style="font-size:18px;font-weight:bold;color:green;"/>
+                                    <field name="so_gio_tang_ca"/>
+                                    <field name="trang_thai"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Khác">
+                            <group>
+                                <field name="ghi_chu" nolabel="1" placeholder="Ghi chú..."/>
+                                <field name="xac_nhan_hr"/>
+                                <field name="active"/>
+                            </group>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_cham_cong_search" model="ir.ui.view">
+        <field name="name">nhan.su.cham.cong.search</field>
+        <field name="model">nhan.su.cham.cong</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nhan_vien_id"/>
+                <field name="ngay_cham_cong"/>
+                <field name="thang"/>
+                <field name="nam"/>
+                <filter string="Năm" name="group_nam" context="{'group_by':'nam'}"/>
+                <filter string="Tháng" name="group_thang" context="{'group_by':'thang'}"/>
+                <filter string="Nhân viên" name="group_nhan_vien" context="{'group_by':'nhan_vien_id'}"/>
+                <filter string="Phòng ban" name="group_phong_ban" context="{'group_by':'phong_ban_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_cham_cong" model="ir.actions.act_window">
+        <field name="name">Chấm công</field>
+        <field name="res_model">nhan.su.cham.cong</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_group_nam': 1, 'search_default_group_thang': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Tạo bản chấm công mới
+            </p>
+        </field>
+    </record>
+</odoo>
+
+

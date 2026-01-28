@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_phe_duyet_tree" model="ir.ui.view">
+        <field name="name">tai.san.phe.duyet.tree</field>
+        <field name="model">tai.san.phe.duyet</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="de_xuat_id"/>
+                <field name="cap_duyet"/>
+                <field name="nhan_vien_id"/>
+                <field name="ngay_phe_duyet"/>
+                <field name="ket_qua"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_phe_duyet_form" model="ir.ui.view">
+        <field name="name">tai.san.phe.duyet.form</field>
+        <field name="model">tai.san.phe.duyet</field>
+        <field name="arch" type="xml">
+            <form string="Phê duyệt">
+                <header>
+                    <button name="action_dong_y" string="Đồng ý" type="object" class="oe_highlight"/>
+                    <button name="action_tu_choi" string="Từ chối" type="object"/>
+                    <field name="ket_qua" widget="statusbar" statusbar_visible="cho_duyet,dong_y,tu_choi"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Thông tin chung">
+                            <field name="name"/>
+                            <field name="de_xuat_id"/>
+                            <field name="cap_duyet"/>
+                            <field name="so_tien_duyet" widget="monetary" options="{'currency_field': False}"/>
+                        </group>
+                        <group string="Thông tin phê duyệt">
+                            <field name="nhan_vien_id" options="{'no_create': True}"/>
+                            <field name="ngay_phe_duyet"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Ý kiến phê duyệt">
+                            <field name="y_kien" placeholder="Nhập ý kiến phê duyệt..." nolabel="1"/>
+                        </page>
+                        <page string="Ghi chú">
+                            <field name="ghi_chu" placeholder="Ghi chú thêm..." nolabel="1"/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_phe_duyet" model="ir.actions.act_window">
+        <field name="name">Phê duyệt</field>
+        <field name="res_model">tai.san.phe.duyet</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

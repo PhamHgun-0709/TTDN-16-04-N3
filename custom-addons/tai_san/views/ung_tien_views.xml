@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ung_tien_tree" model="ir.ui.view">
+        <field name="name">tai.san.ung.tien.tree</field>
+        <field name="model">tai.san.ung.tien</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="de_xuat_id"/>
+                <field name="ngay_ung"/>
+                <field name="nhan_vien_id"/>
+                <field name="so_tien_ung"/>
+                <field name="so_tien_con_lai"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_ung_tien_form" model="ir.ui.view">
+        <field name="name">tai.san.ung.tien.form</field>
+        <field name="model">tai.san.ung.tien</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_gui_duyet" string="Gửi duyệt" type="object" class="oe_highlight" invisible="trang_thai != 'nhap'"/>
+                    <button name="action_duyet" string="Duyệt" type="object" class="oe_highlight" invisible="trang_thai != 'cho_duyet'"/>
+                    <button name="action_chi_tien" string="Chi tiền" type="object" class="oe_highlight" invisible="trang_thai != 'da_duyet'"/>
+                    <button name="action_tao_tai_san" string="Tạo tài sản" type="object" class="btn-success" invisible="tai_san_id or trang_thai not in ['da_duyet', 'da_chi']" icon="fa-plus-square"/>
+                    <button name="action_quyet_toan" string="Quyết toán" type="object" class="oe_highlight" invisible="trang_thai not in ['da_chi', 'cho_chi']"/>
+                    <field name="trang_thai" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(tai_san.action_tai_san)d" type="action" class="oe_stat_button" icon="fa-archive" invisible="not tai_san_id">
+                            <field name="tai_san_id" invisible="1"/>
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Xem tài sản</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="de_xuat_id"/>
+                            <field name="ngay_ung"/>
+                            <field name="nhan_vien_id"/>
+                        </group>
+                        <group>
+                            <field name="so_tien_ung"/>
+                            <field name="so_tien_da_chi"/>
+                            <field name="so_tien_con_lai"/>
+                            <field name="hinh_thuc_ung"/>
+                            <field name="tai_san_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="so_tien_quyet_toan"/>
+                            <field name="so_tien_hoan_tra"/>
+                            <field name="ngay_quyet_toan"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lý do">
+                            <field name="ly_do" placeholder="Lý do ứng tiền..." nolabel="1"/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids" widget="mail_followers" nolabel="1"/>
+                            <field name="activity_ids" widget="mail_activity" nolabel="1"/>
+                            <field name="message_ids" widget="mail_thread" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ung_tien" model="ir.actions.act_window">
+        <field name="name">Ứng tiền</field>
+        <field name="res_model">tai.san.ung.tien</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

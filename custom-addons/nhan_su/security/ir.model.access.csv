@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nhan_su_phong_ban,access.nhan.su.phong.ban,model_nhan_su_phong_ban,base.group_user,1,1,1,1
+access_nhan_su_chuc_vu,access.nhan.su.chuc.vu,model_nhan_su_chuc_vu,base.group_user,1,1,1,1
+access_nhan_su_nhan_vien,access.nhan.su.nhan.vien,model_nhan_su_nhan_vien,base.group_user,1,1,1,1
+access_nhan_su_ca_lam_viec,access.nhan.su.ca.lam.viec,model_nhan_su_ca_lam_viec,base.group_user,1,1,1,1
+access_nhan_su_ngay_lam_viec,access.nhan.su.ngay.lam.viec,model_nhan_su_ngay_lam_viec,base.group_user,1,0,0,0
+access_nhan_su_cham_cong,access.nhan.su.cham.cong,model_nhan_su_cham_cong,base.group_user,1,1,1,1
+access_nhan_su_tong_hop_cong,access.nhan.su.tong.hop.cong,model_nhan_su_tong_hop_cong,base.group_user,1,1,1,1
+access_nhan_su_bang_luong,access.nhan.su.bang_luong,model_nhan_su_bang_luong,base.group_user,1,1,1,1
+access_nhan_su_chi_tiet_luong,access.nhan.su.chi.tiet.luong,model_nhan_su_chi_tiet_luong,base.group_user,1,1,1,1
+access_nhan_su_dashboard,access.nhan.su.dashboard,model_nhan_su_dashboard,base.group_user,1,1,1,1
+access_nhan_su_tong_hop_cong_wizard,access.nhan.su.tong.hop.cong.wizard,model_nhan_su_tong_hop_cong_wizard,base.group_user,1,1,1,1

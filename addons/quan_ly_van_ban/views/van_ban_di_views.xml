@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_van_ban_di_form" model="ir.ui.view">
+        <field name="name">van.ban.di.form</field>
+        <field name="model">van.ban.di</field>
+        <field name="arch" type="xml">
+            <form string="Văn bản đi">
+                <header>
+                    <field name="trang_thai" widget="statusbar" 
+                           statusbar_visible="du_thao,cho_duyet,da_duyet,da_ban_hanh"
+                           options="{'clickable': '1'}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="so_van_ban" readonly="1"/>
+                        </h1>
+                        <h2>
+                            <field name="trich_yeu" placeholder="Trích yếu văn bản..." class="o_text_overflow"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group string="📄 Thông tin văn bản">
+                            <field name="so_ky_hieu" placeholder="VD: 100/CV-VP"/>
+                            <field name="loai_van_ban_id" options="{'no_create': True}"/>
+                            <field name="noi_nhan" placeholder="Cơ quan/đơn vị nhận"/>
+                        </group>
+                        <group string="👥 Người liên quan">
+                            <field name="ngay_ban_hanh" widget="date"/>
+                            <field name="nguoi_soan_id" options="{'no_create': True}"/>
+                            <field name="nguoi_ky_id" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="📝 Nội dung văn bản">
+                            <field name="noi_dung" placeholder="Nhập nội dung chi tiết của văn bản..."/>
+                        </page>
+                        <page string="📌 Ghi chú">
+                            <field name="ghi_chu" placeholder="Thêm ghi chú nếu cần..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View -->
+    <record id="view_van_ban_di_list" model="ir.ui.view">
+        <field name="name">van.ban.di.list</field>
+        <field name="model">van.ban.di</field>
+        <field name="arch" type="xml">
+            <list string="Danh sách văn bản đi" decoration-muted="trang_thai=='du_thao'" 
+                  decoration-warning="trang_thai=='cho_duyet'" decoration-success="trang_thai=='da_ban_hanh'">
+                <field name="so_van_ban"/>
+                <field name="so_ky_hieu"/>
+                <field name="ngay_ban_hanh" widget="date"/>
+                <field name="loai_van_ban_id"/>
+                <field name="trich_yeu"/>
+                <field name="noi_nhan"/>
+                <field name="nguoi_ky_id"/>
+                <field name="trang_thai" widget="badge" 
+                       decoration-muted="trang_thai=='du_thao'" 
+                       decoration-warning="trang_thai=='cho_duyet'" 
+                       decoration-info="trang_thai=='da_duyet'"
+                       decoration-success="trang_thai=='da_ban_hanh'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_van_ban_di_search" model="ir.ui.view">
+        <field name="name">van.ban.di.search</field>
+        <field name="model">van.ban.di</field>
+        <field name="arch" type="xml">
+            <search string="Tìm kiếm văn bản đi">
+                <field name="so_van_ban"/>
+                <field name="so_ky_hieu"/>
+                <field name="trich_yeu"/>
+                <field name="noi_nhan"/>
+                <field name="loai_van_ban_id"/>
+                
+                <filter string="Dự thảo" name="du_thao" domain="[('trang_thai','=','du_thao')]"/>
+                <filter string="Chờ duyệt" name="cho_duyet" domain="[('trang_thai','=','cho_duyet')]"/>
+                <filter string="Đã duyệt" name="da_duyet" domain="[('trang_thai','=','da_duyet')]"/>
+                <filter string="Đã ban hành" name="da_ban_hanh" domain="[('trang_thai','=','da_ban_hanh')]"/>
+                
+                <separator/>
+                <filter string="Loại văn bản" name="group_loai_van_ban" context="{'group_by':'loai_van_ban_id'}"/>
+                <filter string="Trạng thái" name="group_trang_thai" context="{'group_by':'trang_thai'}"/>
+                <filter string="Người ký" name="group_nguoi_ky" context="{'group_by':'nguoi_ky_id'}"/>
+                <filter string="Ngày ban hành" name="group_ngay_ban_hanh" context="{'group_by':'ngay_ban_hanh'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_van_ban_di" model="ir.actions.act_window">
+        <field name="name">Văn bản đi</field>
+        <field name="res_model">van.ban.di</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

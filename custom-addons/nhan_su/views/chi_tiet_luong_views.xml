@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_chi_tiet_luong_tree" model="ir.ui.view">
+        <field name="name">nhan.su.chi.tiet.luong.tree</field>
+        <field name="model">nhan.su.chi.tiet.luong</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="nhan_vien_id"/>
+                <field name="phong_ban_id"/>
+                <field name="chuc_vu_id"/>
+                <field name="cong_quy_doi"/>
+                <field name="luong_co_ban"/>
+                <field name="thu_nhap" sum="Tổng"/>
+                <field name="tong_khau_tru" sum="Tổng"/>
+                <field name="thuc_linh" sum="Tổng"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_chi_tiet_luong_form" model="ir.ui.view">
+        <field name="name">nhan.su.chi.tiet.luong.form</field>
+        <field name="model">nhan.su.chi.tiet.luong</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(action_tong_hop_cong)d" type="action" class="oe_stat_button" icon="fa-calculator"
+                                context="{'default_nhan_vien_id': nhan_vien_id, 'search_default_nhan_vien_id': nhan_vien_id}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Xem</span>
+                                <span class="o_stat_text">Tổng hợp công</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>Phiếu lương</h1>
+                        <h3><field name="nhan_vien_id" readonly="1"/></h3>
+                    </div>
+                    <group col="2">
+                            <field name="bang_luong_id"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="phong_ban_id"/>
+                            <field name="chuc_vu_id"/>
+                        </group>
+                        <group>
+                            <field name="tong_hop_cong_id"/>
+                            <field name="cong_chuan"/>
+                            <field name="cong_quy_doi"/>
+                        </group>
+                    
+                    <notebook>
+                        <page string="Thu nhập">
+                            <group string="Lương cơ bản">
+                                <group>
+                                    <field name="luong_co_ban"/>
+                                    <field name="don_gia_cong"/>
+                                    <field name="luong_theo_cong"/>
+                                </group>
+                                <group>
+                                    <field name="tong_gio_tang_ca"/>
+                                    <field name="tien_tang_ca"/>
+                                </group>
+                            </group>
+                            <group string="Phụ cấp">
+                                <group>
+                                    <field name="phu_cap_chuc_vu"/>
+                                    <field name="phu_cap_an_trua"/>
+                                    <field name="phu_cap_xang_xe"/>
+                                </group>
+                                <group>
+                                    <field name="phu_cap_dien_thoai"/>
+                                    <field name="phu_cap_khac"/>
+                                    <field name="tong_phu_cap"/>
+                                </group>
+                            </group>
+                            <group string="Thưởng">
+                                <field name="thuong"/>
+                            </group>
+                            <separator/>
+                            <group>
+                                <group></group>
+                                <group>
+                                    <field name="thu_nhap" class="oe_subtotal_footer_separator" 
+                                           widget="monetary" style="font-size:16px;font-weight:bold;"/>
+                                </group>
+                            </group>
+                        </page>
+                        
+                        <page string="Khấu trừ">
+                            <group string="Bảo hiểm">
+                                <group>
+                                    <field name="bao_hiem_xa_hoi"/>
+                                    <field name="bao_hiem_y_te"/>
+                                </group>
+                                <group>
+                                    <field name="bao_hiem_that_nghiep"/>
+                                    <field name="tong_bao_hiem"/>
+                                </group>
+                            </group>
+                            <group string="Thuế và khác">
+                                <group>
+                                    <field name="thue_thu_nhap"/>
+                                </group>
+                                <group>
+                                    <field name="khau_tru_khac"/>
+                                </group>
+                            </group>
+                            <separator/>
+                            <group>
+                                <group></group>
+                                <group>
+                                    <field name="tong_khau_tru" class="oe_subtotal_footer_separator" 
+                                           widget="monetary" style="font-size:16px;font-weight:bold;"/>
+                                </group>
+                            </group>
+                        </page>
+                        
+                        <page string="Kết quả">
+                            <group>
+                                <group string="Tổng thu nhập">
+                                    <field name="thu_nhap" widget="monetary" readonly="1"/>
+                                </group>
+                                <group string="Tổng khấu trừ">
+                                    <field name="tong_khau_tru" widget="monetary" readonly="1"/>
+                                </group>
+                            </group>
+                            <separator/>
+                            <group>
+                                <group></group>
+                                <group>
+                                    <field name="thuc_linh" widget="monetary" readonly="1"
+                                           style="font-size:20px;font-weight:bold;color:green;"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Ghi chú">
+                            <field name="ghi_chu" nolabel="1" placeholder="Ghi chú về phiếu lương..."/>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_chi_tiet_luong_search" model="ir.ui.view">
+        <field name="name">nhan.su.chi.tiet.luong.search</field>
+        <field name="model">nhan.su.chi.tiet.luong</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nhan_vien_id"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_chi_tiet_luong" model="ir.actions.act_window">
+        <field name="name">Chi tiết lương</field>
+        <field name="res_model">nhan.su.chi.tiet.luong</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Chi tiết lương nhân viên
+            </p>
+        </field>
+    </record>
+</odoo>
+

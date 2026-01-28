@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_chuc_vu_tree" model="ir.ui.view">
+        <field name="name">nhan.su.chuc.vu.tree</field>
+        <field name="model">nhan.su.chuc.vu</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="ma_chuc_vu"/>
+                <field name="name"/>
+                <field name="cap_bac"/>
+                <field name="luong_co_ban"/>
+                <field name="phu_cap"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_chuc_vu_form" model="ir.ui.view">
+        <field name="name">nhan.su.chuc.vu.form</field>
+        <field name="model">nhan.su.chuc.vu</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_chuc_vu"/>
+                            <field name="name"/>
+                            <field name="cap_bac"/>
+                        </group>
+                        <group>
+                            <field name="luong_co_ban" widget="monetary"/>
+                            <field name="phu_cap" widget="monetary"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="mo_ta" placeholder="Mô tả chức vụ..."/>
+                    </group>
+                    <notebook>
+                        <page string="Nhân viên">
+                            <field name="nhan_vien_ids">
+                                <list>
+                                    <field name="ma_nhan_vien"/>
+                                    <field name="name"/>
+                                    <field name="phong_ban_id"/>
+                                    <field name="so_dien_thoai"/>
+                                    <field name="trang_thai"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Thảo luận">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_chuc_vu" model="ir.actions.act_window">
+        <field name="name">Chức vụ</field>
+        <field name="res_model">nhan.su.chuc.vu</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

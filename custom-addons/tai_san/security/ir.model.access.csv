@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tai_san_tai_san,access.tai.san.tai.san,model_tai_san_tai_san,base.group_user,1,1,1,1
+access_tai_san_de_xuat,access.tai.san.de.xuat,model_tai_san_de_xuat,base.group_user,1,1,1,1
+access_tai_san_phe_duyet,access.tai.san.phe.duyet,model_tai_san_phe_duyet,base.group_user,1,1,1,1
+access_tai_san_ung_tien,access.tai.san.ung.tien,model_tai_san_ung_tien,base.group_user,1,1,1,1
+access_tai_san_mua_tai_san,access.tai.san.mua.tai.san,model_tai_san_mua_tai_san,base.group_user,1,1,1,1
+access_tai_san_cap_phat,access.tai.san.cap.phat,model_tai_san_cap_phat,base.group_user,1,1,1,1
+access_tai_san_thay_the,access.tai.san.thay.the,model_tai_san_thay_the,base.group_user,1,1,1,1
+access_tai_san_dashboard,access.tai.san.dashboard,model_tai_san_dashboard,base.group_user,1,1,1,0

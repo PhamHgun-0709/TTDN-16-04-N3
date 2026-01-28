@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Dashboard View -->
+    <record id="view_tai_san_dashboard_form" model="ir.ui.view">
+        <field name="name">tai.san.dashboard.form</field>
+        <field name="model">tai.san.dashboard</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false">
+                <header>
+                    <button name="action_refresh_dashboard" type="object" string="🔄 Làm mới" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <div class="oe_title mb-3">
+                        <h1 style="color: #0891b2;">🏢 Dashboard Quản lý Tài sản</h1>
+                        <p style="color: #6b7280;">Tổng quan tình hình tài sản công ty • <i class="fa fa-clock-o"/> Cập nhật tự động</p>
+                    </div>
+                    
+                    <!-- PHẦN 1: THỐNG KÊ TÀI SẢN THEO TÌNH TRẠNG -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #0891b2;">
+                            📦 PHÂN LOẠI THEO TÌNH TRẠNG
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #0891b2 !important; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-cubes fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="tong_tai_san" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">TỔNG TÀI SẢN</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #10b981 !important; background: linear-gradient(135deg, #34d399 0%, #10b981 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-check-circle fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="tai_san_dang_su_dung" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">ĐANG SỬ DỤNG</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #f59e0b !important; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-clock-o fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="tai_san_chua_mua" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">CHƯA MUA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #ef4444 !important; background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-trash-o fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="tai_san_thanh_ly" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">ĐÃ THANH LÝ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHẦN 2: THỐNG KÊ THEO TRẠNG THÁI -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #3b82f6;">
+                            🔧 PHÂN LOẠI THEO TRẠNG THÁI
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #10b981 !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-thumbs-up fa-2x mb-2" style="color: #10b981;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #10b981;">
+                                            <field name="tai_san_tot" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Tốt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #3b82f6 !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-wrench fa-2x mb-2" style="color: #3b82f6;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #3b82f6;">
+                                            <field name="tai_san_bao_tri" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Đang bảo trì</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #ef4444 !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-times-circle fa-2x mb-2" style="color: #ef4444;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #ef4444;">
+                                            <field name="tai_san_hong" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Hỏng</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #f59e0b !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-exchange fa-2x mb-2" style="color: #f59e0b;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #f59e0b;">
+                                            <field name="tai_san_can_thay" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Cần thay thế</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHẦN 3: GIÁ TRỊ TÀI SẢN -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #10b981;">
+                            💰 GIÁ TRỊ TÀI SẢN
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-4 mb-3">
+                                <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
+                                    <div class="card-body text-center text-white py-4">
+                                        <i class="fa fa-briefcase fa-3x mb-3" style="opacity: 0.9;"/>
+                                        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                            <field name="tong_nguyen_gia" widget="monetary" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0" style="font-size: 1rem; font-weight: 500;">TỔNG NGUYÊN GIÁ</p>
+                                        <p class="mb-0 mt-2" style="font-size: 0.8rem; opacity: 0.8;">
+                                            <i class="fa fa-info-circle"/> Giá trị ban đầu
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-4 mb-3">
+                                <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                                    <div class="card-body text-center text-white py-4">
+                                        <i class="fa fa-line-chart fa-3x mb-3" style="opacity: 0.9;"/>
+                                        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                            <field name="tong_gia_tri_con_lai" widget="monetary" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0" style="font-size: 1rem; font-weight: 500;">GIÁ TRỊ CÒN LẠI</p>
+                                        <p class="mb-0 mt-2" style="font-size: 0.8rem; opacity: 0.8;">
+                                            <i class="fa fa-info-circle"/> Sau khấu hao
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-4 mb-3">
+                                <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                                    <div class="card-body text-center text-white py-4">
+                                        <i class="fa fa-pie-chart fa-3x mb-3" style="opacity: 0.9;"/>
+                                        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                            <field name="tong_gia_tri_khau_hao" widget="monetary" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0" style="font-size: 1rem; font-weight: 500;">ĐÃ KHẤU HAO</p>
+                                        <p class="mb-0 mt-2" style="font-size: 0.8rem; opacity: 0.8;">
+                                            <i class="fa fa-info-circle"/> Tổng giá trị giảm
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHẦN 4: QUẢN LÝ ĐỀ XUẤT & ỨNG TIỀN -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #f59e0b;">
+                            📋 QUẢN LÝ ĐỀ XUẤT &amp; ỨNG TIỀN
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-top: 3px solid #f59e0b !important;">
+                                    <div class="card-body text-center py-4">
+                                        <i class="fa fa-hourglass-half fa-3x mb-3" style="color: #f59e0b;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold; color: #f59e0b;">
+                                            <field name="de_xuat_cho_duyet" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 1rem; color: #6b7280; font-weight: 500;">Đề xuất chờ duyệt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-top: 3px solid #10b981 !important;">
+                                    <div class="card-body text-center py-4">
+                                        <i class="fa fa-check-square fa-3x mb-3" style="color: #10b981;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold; color: #10b981;">
+                                            <field name="de_xuat_da_duyet" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 1rem; color: #6b7280; font-weight: 500;">Đề xuất đã duyệt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-top: 3px solid #ef4444 !important;">
+                                    <div class="card-body text-center py-4">
+                                        <i class="fa fa-clock-o fa-3x mb-3" style="color: #ef4444;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold; color: #ef4444;">
+                                            <field name="ung_tien_cho_duyet" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 1rem; color: #6b7280; font-weight: 500;">Ứng tiền chờ duyệt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0" style="border-top: 3px solid #3b82f6 !important;">
+                                    <div class="card-body text-center py-4">
+                                        <i class="fa fa-money fa-3x mb-3" style="color: #3b82f6;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold; color: #3b82f6;">
+                                            <field name="ung_tien_da_chi" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 1rem; color: #6b7280; font-weight: 500;">Ứng tiền đã chi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Dashboard Action -->
+    <record id="action_tai_san_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard Tài sản</field>
+        <field name="res_model">tai.san.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record>
+</odoo>

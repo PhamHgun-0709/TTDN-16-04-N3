@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sequence cho mã nhân viên -->
+    <record id="seq_nhan_vien" model="ir.sequence">
+        <field name="name">Nhân viên</field>
+        <field name="code">nhan.su.nhan.vien</field>
+        <field name="prefix">NV</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <!-- Sequence cho mã chấm công -->
+    <record id="seq_cham_cong" model="ir.sequence">
+        <field name="name">Chấm công</field>
+        <field name="code">nhan.su.cham.cong</field>
+        <field name="prefix">CC/%(year)s/%(month)s/</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

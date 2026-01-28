@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tai_chinh_ke_toan_phieu_chi,access.tai.chinh.ke.toan.phieu.chi,model_tai_chinh_ke_toan_phieu_chi,base.group_user,1,1,1,1
+access_tai_chinh_ke_toan_phieu_thu,access.tai.chinh.ke.toan.phieu.thu,model_tai_chinh_ke_toan_phieu_thu,base.group_user,1,1,1,1
+access_tai_chinh_ke_toan_so_quy,access.tai.chinh.ke.toan.so.quy,model_tai_chinh_ke_toan_so_quy,base.group_user,1,1,1,1
+access_tai_chinh_ke_toan_khau_hao_tai_san,access.tai.chinh.ke.toan.khau.hao.tai.san,model_tai_chinh_ke_toan_khau_hao_tai_san,base.group_user,1,1,1,1
+access_tai_chinh_ke_toan_dong_khau_hao,access.tai.chinh.ke.toan.dong.khau.hao,model_tai_chinh_ke_toan_dong_khau_hao,base.group_user,1,1,1,1
+access_tai_chinh_ke_toan_dashboard,access.tai.chinh.ke.toan.dashboard,model_tai_chinh_ke_toan_dashboard,base.group_user,1,1,1,0
+access_tai_chinh_ke_toan_thanh_toan_hang_loat,access.tai.chinh.ke.toan.thanh.toan.hang.loat,model_tai_chinh_ke_toan_thanh_toan_hang_loat,base.group_user,1,1,1,1
+access_tai_chinh_ke_toan_canh_bao_gian_lan,access.tai.chinh.ke.toan.canh.bao.gian.lan,model_tai_chinh_ke_toan_canh_bao_gian_lan,base.group_user,1,1,1,1

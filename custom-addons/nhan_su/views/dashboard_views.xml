@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Dashboard View -->
+    <record id="view_nhan_su_dashboard_form" model="ir.ui.view">
+        <field name="name">nhan.su.dashboard.form</field>
+        <field name="model">nhan.su.dashboard</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false">
+                <header>
+                    <button name="action_refresh_dashboard" type="object" string="🔄 Làm mới" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <div class="oe_title mb-3">
+                        <h1 style="color: #7c3aed;">📊 Dashboard Quản lý Nhân sự</h1>
+                        <p style="color: #6b7280;">Tổng quan tình hình nhân sự • <i class="fa fa-clock-o"/> Cập nhật tự động</p>
+                    </div>
+                    
+                    <!-- PHẦN 1: THỐNG KÊ NHÂN VIÊN -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #7c3aed;">
+                            👥 TỔNG QUAN NHÂN SỰ
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-4 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #7c3aed !important; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-users fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="tong_nhan_vien" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">TỔNG NHÂN VIÊN</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-4 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #10b981 !important; background: linear-gradient(135deg, #34d399 0%, #10b981 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-check-circle fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="nhan_vien_dang_lam" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">ĐANG LÀM VIỆC</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-4 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #ef4444 !important; background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);">
+                                    <div class="card-body text-center text-white">
+                                        <i class="fa fa-user-times fa-2x mb-2" style="opacity: 0.8;"/>
+                                        <h2 class="mb-0" style="font-size: 2.5rem; font-weight: bold;">
+                                            <field name="nhan_vien_nghi_viec" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0 mt-2" style="font-size: 0.9rem; opacity: 0.9;">NGHỈ VIỆC</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHẦN 2: CHẤM CÔNG & ĐIỂM DANH -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #3b82f6;">
+                            ⏰ CHẤM CÔNG &amp; HIỆN DIỆN
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #3b82f6 !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-calendar-check-o fa-2x mb-2" style="color: #3b82f6;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #3b82f6;">
+                                            <field name="tong_ngay_cong" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Tổng công tháng</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #10b981 !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-check-square fa-2x mb-2" style="color: #10b981;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #10b981;">
+                                            <field name="ngay_di_lam" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Tổng ngày công đi làm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #f59e0b !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-bed fa-2x mb-2" style="color: #f59e0b;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #f59e0b;">
+                                            <field name="ngay_nghi_phep" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Ngày nghỉ phép</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-3 mb-3">
+                                <div class="card shadow-sm border-0 h-100" style="border-top: 3px solid #ef4444 !important;">
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-exclamation-triangle fa-2x mb-2" style="color: #ef4444;"/>
+                                        <h3 class="mb-0" style="font-size: 2rem; font-weight: bold; color: #ef4444;">
+                                            <field name="ngay_vang" nolabel="1"/>
+                                        </h3>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; color: #6b7280;">Ngày vắng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHẦN 3: THỐNG KÊ LƯƠNG -->
+                    <div class="mb-4">
+                        <h3 style="color: #374151; font-weight: 600; margin-bottom: 1rem; padding: 0.75rem; background: #f9fafb; border-left: 4px solid #ec4899;">
+                            💰 THỐNG KÊ LƯƠNG THÁNG
+                        </h3>
+                        <div class="o_row mt-2 mb-3">
+                            <div class="o_col-6 mb-3">
+                                <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">
+                                    <div class="card-body text-center text-white py-4">
+                                        <i class="fa fa-money fa-3x mb-3" style="opacity: 0.9;"/>
+                                        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                            <field name="tong_luong_thang" widget="monetary" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0" style="font-size: 1.1rem; font-weight: 500;">TỔNG LƯƠNG THÁNG</p>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; opacity: 0.8;">
+                                            <i class="fa fa-calculator"/> Tính theo bảng lương đã duyệt
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-6 mb-3">
+                                <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);">
+                                    <div class="card-body text-center text-white py-4">
+                                        <i class="fa fa-user fa-3x mb-3" style="opacity: 0.9;"/>
+                                        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                            <field name="luong_trung_binh" widget="monetary" nolabel="1"/>
+                                        </h2>
+                                        <p class="mb-0" style="font-size: 1.1rem; font-weight: 500;">LƯƠNG TRUNG BÌNH/NGƯỜI</p>
+                                        <p class="mb-0 mt-2" style="font-size: 0.85rem; opacity: 0.8;">
+                                            <i class="fa fa-bar-chart"/> Lương thực lĩnh trung bình
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="o_row mb-3">
+                            <div class="o_col-6 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #14b8a6 !important;">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <i class="fa fa-gift fa-3x" style="color: #14b8a6;"/>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h5 style="color: #6b7280; margin-bottom: 0.5rem; font-size: 0.9rem;">Tổng phụ cấp</h5>
+                                                <h3 style="margin: 0; font-weight: bold; color: #14b8a6;">
+                                                    <field name="tong_phu_cap" widget="monetary" nolabel="1"/>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="o_col-6 mb-3">
+                                <div class="card shadow-sm border-0" style="border-left: 4px solid #f59e0b !important;">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <i class="fa fa-trophy fa-3x" style="color: #f59e0b;"/>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h5 style="color: #6b7280; margin-bottom: 0.5rem; font-size: 0.9rem;">Tổng thưởng</h5>
+                                                <h3 style="margin: 0; font-weight: bold; color: #f59e0b;">
+                                                    <field name="tong_thuong" widget="monetary" nolabel="1"/>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Dashboard Action -->
+    <record id="action_nhan_su_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard Nhân sự</field>
+        <field name="res_model">nhan.su.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record>
+</odoo>

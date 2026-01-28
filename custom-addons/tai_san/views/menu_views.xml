@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_tai_san_root"
+              name="🏢 Tài sản"
+              sequence="50"
+              web_icon="tai_san,static/description/icon.png"/>
+
+    <!-- Dashboard -->
+    <menuitem id="menu_tai_san_dashboard"
+              name="📊 Dashboard"
+              parent="menu_tai_san_root"
+              action="action_tai_san_dashboard"
+              sequence="5"/>
+
+    <!-- Danh mục tài sản -->
+    <menuitem id="menu_tai_san_tai_san"
+              name="📦 Danh sách tài sản"
+              parent="menu_tai_san_root"
+              action="action_tai_san"
+              sequence="10"/>
+
+    <!-- Nhóm Quản lý -->
+    <menuitem id="menu_quan_ly_group"
+              name="Quản lý"
+              parent="menu_tai_san_root"
+              sequence="20"/>
+    
+    <menuitem id="menu_de_xuat_tai_san"
+              name="Đề xuất tài sản"
+              parent="menu_quan_ly_group"
+              action="action_de_xuat_tai_san"
+              sequence="10"/>
+    
+    <menuitem id="menu_phe_duyet"
+              name="Phê duyệt"
+              parent="menu_quan_ly_group"
+              action="action_phe_duyet"
+              sequence="20"/>
+    
+    <menuitem id="menu_ung_tien"
+              name="Ứng tiền"
+              parent="menu_quan_ly_group"
+              action="action_ung_tien"
+              sequence="30"/>
+    
+    <menuitem id="menu_mua_tai_san"
+              name="Mua tài sản"
+              parent="menu_quan_ly_group"
+              action="action_mua_tai_san"
+              sequence="40"/>
+    
+    <menuitem id="menu_cap_phat_tai_san"
+              name="Cấp phát tài sản"
+              parent="menu_quan_ly_group"
+              action="action_cap_phat_tai_san"
+              sequence="50"/>
+    
+    <menuitem id="menu_thay_the_tai_san"
+              name="Thay thế tài sản"
+              parent="menu_quan_ly_group"
+              action="action_thay_the_tai_san"
+              sequence="60"/>
+</odoo>

@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Cháº¥m cÃ´ng thÃ¡ng 1/2026 - Tuáº§n 1 (02/01 - 03/01) -->
+        <!-- NgÃ y 02/01/2026 - Thá»© 5 -->
+        <record id="cc_nv001_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.1</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">7.9</field>
+            <field name="gio_ra">17.2</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.25</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">18.0</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260102" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-02</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- NgÃ y 03/01/2026 - Thá»© 6 -->
+        <record id="cc_nv001_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">16.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260103" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-03</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- Tuáº§n 2 (05/01 - 09/01) -->
+        <!-- NgÃ y 05/01/2026 - Thá»© 2 -->
+        <record id="cc_nv001_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260105" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-05</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- NgÃ y 06/01/2026 - Thá»© 3 -->
+        <record id="cc_nv001_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260106" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-06</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- NgÃ y 07/01/2026 - Thá»© 4 -->
+        <record id="cc_nv001_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">18.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260107" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-07</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- NgÃ y 08/01/2026 - Thá»© 5 -->
+        <record id="cc_nv001_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260108" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-08</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- NgÃ y 09/01/2026 - Thá»© 6 -->
+        <record id="cc_nv001_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260109" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-09</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- Tuáº§n 3 (12/01 - 13/01 Ä‘áº¿n ngÃ y hiá»‡n táº¡i) -->
+        <!-- NgÃ y 12/01/2026 - Thá»© 2 -->
+        <record id="cc_nv001_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260112" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-12</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+
+        <!-- NgÃ y 13/01/2026 - Thá»© 3 -->
+        <record id="cc_nv001_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_001"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv002_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_002"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv003_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_003"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv004_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_004"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv005_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_005"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv006_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_006"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv007_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_007"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv008_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_008"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv009_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_009"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+        <record id="cc_nv010_20260113" model="nhan.su.cham.cong">
+            <field name="nhan_vien_id" ref="nhan_vien_010"/>
+            <field name="ca_lam_viec_id" ref="ca_hanh_chinh"/>
+            <field name="ngay_cham_cong">2026-01-13</field>
+            <field name="gio_vao">8.5</field>
+            <field name="gio_ra">17.5</field>
+            <field name="loai_ngay">binh_thuong</field>
+        </record>
+    </data>
+</odoo>
+

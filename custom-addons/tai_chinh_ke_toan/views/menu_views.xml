@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_tai_chinh_ke_toan_root"
+              name="💰 Tài chính - Kế toán"
+              sequence="90"/>
+
+    <!-- Dashboard -->
+    <menuitem id="menu_tai_chinh_dashboard"
+              name="📊 Dashboard"
+              parent="menu_tai_chinh_ke_toan_root"
+              action="action_tai_chinh_dashboard"
+              sequence="5"/>
+
+    <!-- Nhóm Thu Chi -->
+    <menuitem id="menu_thu_chi_group"
+              name="💵 Thu Chi"
+              parent="menu_tai_chinh_ke_toan_root"
+              sequence="10"/>
+    
+    <menuitem id="menu_phieu_thu"
+              name="📥 Phiếu thu"
+              parent="menu_thu_chi_group"
+              action="action_phieu_thu"
+              sequence="10"/>
+    
+    <menuitem id="menu_phieu_chi"
+              name="📤 Phiếu chi"
+              parent="menu_thu_chi_group"
+              action="action_phieu_chi"
+              sequence="20"/>
+    
+    <menuitem id="menu_so_quy"
+              name="📖 Sổ quỹ"
+              parent="menu_thu_chi_group"
+              action="action_so_quy"
+              sequence="30"/>
+
+    <!-- Nhóm Khấu hao -->
+    <menuitem id="menu_khau_hao_group"
+              name="📉 Khấu hao"
+              parent="menu_tai_chinh_ke_toan_root"
+              sequence="20"/>
+    
+    <menuitem id="menu_khau_hao_tai_san"
+              name="💹 Khấu hao tài sản"
+              parent="menu_khau_hao_group"
+              action="action_khau_hao_tai_san"
+              sequence="10"/>
+    
+    <menuitem id="menu_dong_khau_hao"
+              name="📊 Dòng khấu hao"
+              parent="menu_khau_hao_group"
+              action="action_dong_khau_hao"
+              sequence="20"/>
+
+    <!-- Nhóm Báo cáo -->
+    <menuitem id="menu_bao_cao_group"
+              name="📋 Báo cáo"
+              parent="menu_tai_chinh_ke_toan_root"
+              sequence="30"/>
+    
+    <menuitem id="menu_bao_cao_thu_chi"
+              name="📈 Báo cáo thu chi"
+              parent="menu_bao_cao_group"
+              action="action_bao_cao_thu_chi"
+              sequence="10"/>
+    
+    <menuitem id="menu_bao_cao_so_quy"
+              name="📑 Báo cáo sổ quỹ"
+              parent="menu_bao_cao_group"
+              action="action_bao_cao_so_quy"
+              sequence="20"/>
+</odoo>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_khau_hao_tai_san_tree" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.khau.hao.tai.san.tree</field>
+        <field name="model">tai.chinh.ke.toan.khau.hao.tai.san</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="tai_san_id"/>
+                <field name="nguyen_gia"/>
+                <field name="khau_hao_hang_thang"/>
+                <field name="da_khau_hao"/>
+                <field name="con_lai"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_khau_hao_tai_san_form" model="ir.ui.view">
+        <field name="name">tai.chinh.ke.toan.khau.hao.tai.san.form</field>
+        <field name="model">tai.chinh.ke.toan.khau.hao.tai.san</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_bat_dau_khau_hao" string="Bắt đầu khấu hao" type="object" class="oe_highlight"/>
+                    <button name="action_tao_dong_khau_hao_thang" string="Tạo dòng khấu hao tháng" type="object" class="oe_highlight"/>
+                    <button name="action_tam_dung" string="Tạm dừng" type="object"/>
+                    <button name="action_ket_thuc" string="Kết thúc" type="object"/>
+                    <field name="trang_thai" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="tai_san_id"/>
+                            <field name="phuong_phap_khau_hao"/>
+                        </group>
+                        <group>
+                            <field name="nguyen_gia"/>
+                            <field name="gia_tri_thu_hoi"/>
+                            <field name="gia_tri_con_lai"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="thoi_gian_khau_hao"/>
+                            <field name="da_khau_hao"/>
+                            <field name="con_lai"/>
+                        </group>
+                        <group>
+                            <field name="ngay_bat_dau_khau_hao"/>
+                            <field name="ngay_ket_thuc_khau_hao"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="khau_hao_hang_thang"/>
+                            <field name="tong_khau_hao"/>
+                            <field name="gia_tri_con_lai_computed"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Dòng khấu hao">
+                            <field name="dong_khau_hao_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="thang"/>
+                                    <field name="nam"/>
+                                    <field name="ngay_khau_hao"/>
+                                    <field name="so_tien_khau_hao"/>
+                                    <field name="trang_thai"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Ghi chú">
+                            <field name="ghi_chu" placeholder="Ghi chú..." nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_khau_hao_tai_san" model="ir.actions.act_window">
+        <field name="name">Khấu hao tài sản</field>
+        <field name="res_model">tai.chinh.ke.toan.khau.hao.tai.san</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+
