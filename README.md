@@ -21,8 +21,6 @@
 
 ---
 
-## Poster
-
 <p align="center">
   <img src="docs/Poster.png" alt="Dashboard" width="800"/>
   <br/>
@@ -461,6 +459,7 @@ Nếu có bất kỳ thắc mắc hoặc cần hỗ trợ, vui lòng liên hệ:
 - Email: pthung0709@gmail.com
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+
 
 
 
