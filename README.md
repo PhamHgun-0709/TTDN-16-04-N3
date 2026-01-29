@@ -21,6 +21,15 @@
 
 ---
 
+## Poster
+
+<p align="center">
+  <img src="docs/Poster.png" alt="Dashboard" width="800"/>
+  <br/>
+</p>
+
+---
+
 ## 📖 1. Giới thiệu
 
 Hệ thống **ERP (Enterprise Resource Planning)** toàn diện được xây dựng trên nền tảng **Odoo 17**, nhằm tối ưu hóa quy trình quản lý doanh nghiệp với ba module chính:
@@ -452,6 +461,7 @@ Nếu có bất kỳ thắc mắc hoặc cần hỗ trợ, vui lòng liên hệ:
 - Email: pthung0709@gmail.com
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+
 
 
 
